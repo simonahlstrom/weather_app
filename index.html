@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/index.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div id="popupBg" class="flexCenter popupHidden">
+      <div id="popup">
+        <h3>Keyboard commands:</h3>
+        <ul>
+          <li>P + arrow keys to select a place to view</li>
+          <li>L + arrow keys to browse the list of the weather forecast</li>
+          <li>T to filter out temperature from the list</li>
+          <li>R to filter out precipitation from the list</li>
+          <li>W to filter out windspeeds from the list</li>
+          <li>H to filter out realtive humidity from the list</li>
+          <li>
+            F to highlight when there's going to be windspeeds above 10m/s the
+            list
+          </li>
+        </ul>
+        <p>Press enter to close this message.</p>
+      </div>
+    </div>
+    <div id="wrapper" class="flexCenter">
+      <div id="app">
+        <header>
+          <div class="flexBetween">
+            <h3>The Weather App</h3>
+            <div id="headerControls" class="flexBetween">
+              <p>Press the "I" key for accessability information</p>
+              <!-- <button class="flexCenter">?</button> -->
+              <select name="cityList" id="cityList"></select>
+            </div>
+          </div>
+        </header>
+
+        <main class="flexCenter">
+          <div id="currentWeather">
+            <h3 id="cityName"></h3>
+            <img src="*" alt="image indicating current weather status" />
+            <h2 id="temperatureNow"></h2>
+            <p class="windText"></p>
+            <p class="rainText"></p>
+            <p id="updateTime"></p>
+          </div>
+
+          <div id="overview">
+            <!-- <div id="dayChoice"></div> -->
+            <div id="scrollableView">
+              <!-- <img src="weathericon/svg/clearsky_day.svg"></img> -->
+            </div>
+            <div id="controls" class="flexColumn">
+              <div class="flexBetween">
+                <h3>Hide data:</h3>
+                <div class="flexBetween controlCell">
+                  <img
+                    src="weathericon/controls/warm.png"
+                    alt="image of a thermometer"
+                  />
+                  <input type="checkbox" id="listTemp" />
+                </div>
+                <div class="flexBetween controlCell">
+                  <img
+                    src="weathericon/controls/rainy.png"
+                    alt="image of a raincloud"
+                  />
+                  <input type="checkbox" id="listRain" />
+                </div>
+                <div class="flexBetween controlCell">
+                  <img
+                    src="weathericon/controls/windy.png"
+                    alt="image of a wind vane"
+                  />
+                  <input type="checkbox" id="listWind" />
+                </div>
+                <div class="flexBetween controlCell">
+                  <img
+                    src="weathericon/controls/humidity.png"
+                    alt="image of a raindrop with percentage"
+                  />
+                  <input type="checkbox" id="listHum" />
+                </div>
+              </div>
+              <div class="flexBetween">
+                <h4>Filter away winds below 10 m/s:</h4>
+                <input type="checkbox" id="windFilter" />
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer>Data gathered from <a href="https://www.yr.no">yr.no</a></footer>
+    </div>
+  </body>
+  <script src="script/locations.js"></script>
+  <script src="script/classes.js"></script>
+  <script src="script/index.js"></script>
+</html>

@@ -1,0 +1,193 @@
+/* GENERAL */
+
+:root {
+  --bgColor: #f1f1f1;
+  --textColor: #252525;
+  --oddItem: #dddddd;
+  --smallIcon: 30px;
+  --border: 1px solid #252525;
+  --popupBgCol: #6666663b;
+}
+
+/* TAGS */
+
+* {
+  color: var(--textColor);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  background-color: var(--bgColor);
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  height: 75vh;
+  width: 75vw;
+  border: var(--border);
+  margin-top: 10px;
+}
+
+header img {
+  height: 15px;
+}
+
+select {
+  height: 25px;
+  padding: 0px;
+}
+
+p,
+h3,
+h4 {
+  margin: 0px;
+}
+
+footer {
+  position: absolute;
+  bottom: 3vh;
+}
+
+/* CLASSES */
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.controlCell {
+  width: 55px;
+}
+
+/* .listTemp,
+.listRain,
+.listWind,
+.listHum {
+  visibility: visible;
+}
+
+.visible {
+  visibility: visible;
+} */
+
+.oddListItem {
+  background-color: var(--oddItem);
+}
+
+.collapse {
+  visibility: collapse;
+}
+
+.semiTransparent {
+  opacity: 0.2;
+}
+
+.popupHidden {
+  z-index: -1;
+}
+
+.popupVisible {
+  z-index: 1;
+}
+
+/* ID'S */
+
+#wrapper {
+  height: inherit;
+  width: inherit;
+  position: relative;
+  background-color: var(--bgColor);
+}
+
+#cityList {
+  padding: 0px;
+  margin: 0px 5px;
+}
+
+#currentWeather {
+  width: 25%;
+  height: 100%;
+  border-right: var(--border);
+}
+
+#overview {
+  width: 75%;
+  height: 100%;
+}
+
+#currentWeather,
+#overview > #controls {
+  padding: 10px;
+}
+
+#dayChoice {
+  height: 10%;
+}
+#controls {
+  height: 20%;
+}
+
+#controls img {
+  height: var(--smallIcon);
+  width: var(--smallIcon);
+}
+
+#windFilter {
+  margin-top: 10px;
+}
+
+#scrollableView {
+  height: 80%;
+  overflow: scroll;
+  border-bottom: var(--border);
+  overflow-x: hidden;
+}
+
+#scrollableView > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+#scrollableView > div:nth-child(odd) {
+  background-color: var(--oddItem);
+}
+
+#scrollableView img {
+  height: var(--smallIcon);
+  width: var(--smallIcon);
+}
+
+#scrollableView > div * {
+  flex-grow: 1;
+  flex-basis: 100px;
+}
+
+#popupBg {
+  background-color: var(--popupBgCol);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+#popup {
+  background-color: var(--bgColor);
+  padding: 20px;
+}
